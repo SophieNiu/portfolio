@@ -1,273 +1,332 @@
-html{
+html {
     scroll-behavior: smooth;
 }
-
-body{
-  background-color: #ddd;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+/* color wheel:career/webpage_v1  */
+/* font-size default 1em = 16px */
+body {
+    background-color: #d3ddee;
+    font-size: 0.9em;
+    color: #454d5c;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
+/* title customization */
+h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 0.2em;
 }
 
-h2{
-  font-size: 32px;
-  line-height: 1.5;
+h2 {
+    font-size: 1.2em;
+    line-height: 1.2;
 }
 
-nav ul{
-  list-style-type: none;
+h3 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
 }
 
-nav li{
-  /*Your code here */
-  padding-right: 20px;
-  display: inline;
+/* list customization */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    /* width: 4em; */
 }
 
-nav a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none; /*Your code here - remove the underline*/;
+nav li {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px;
+    display: inline;
+    text-align: center;
 }
 
-nav a:hover{
-  text-decoration: underline; /*Your code here - add the underline*/;
+nav a {
+    color: #4f3e3a;
+    text-decoration: none; /*remove the underline*/
 }
 
-.skip a{
-  background: white;
-  left: 0;
-  padding: 6px;
-  position: absolute; /*Your code here - position relative to the parent */;
-  top: -40px;     /*Your code here - place 40px higher */;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
+nav a:hover {
+    color: #3d6ebd;
+    text-decoration: underline; /*add the underline*/
+    font-weight: bold;
 }
 
-/*Your code here*/
-.skip a:focus{
-/*Add the selector and rule to move the skip link to the exact top.*/
-  top: 0;
+.active {
+    color: rgb(111, 111, 129);
+}
+.project-role {
+    list-style-type: none;
 }
 
-/*Your code here*/
-:focus{
-/*Add the selector and code to put a 2px black border around all elements in focus.*/
-  border: 2px solid black;
+.title-block {
+    color: #f4f4fb;
+    text-shadow: 2px 2px #454d5c;
+    padding: 1em 0 1em 1em;
 }
 
-
-footer{
-  background-color: black;
-  color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / 8;   /*Can you rewrite it?*/
-  padding-top: 30px;
-  text-align: center;
+#email-link {
+    color: #454d5c;
+    font-weight: bold;
 }
 
-
-.container{
-
-  /*Your code here  */
-  display: grid;
-  grid-template-columns: 100px 500px 100px;
-  grid-row-gap: 15px;
-  /*Provided*/
-  grid-template-rows: 30px auto auto auto auto auto 100px; 
-  width: 100vw; 
+.form-horizontal {
+    width: 40em;
+    padding: 3em;
+    align-content: center;
 }
-
-.nav{
-   /*Your code here */
-   justify-items: center; /*what's the difference btwn justify-items and justify-content, justify-self?*/
-   grid-column: 1/-1;
-   grid-row: 1/2;
-
-  /*Provided*/
-  background-color: #ddd;
-  padding: 20px 0; 
-  text-align: left; 
-}
-
-header{
-  background-attachment: fixed; /* Parallax effect */
-  background-image: url('../images/header.jpg');      /* Your code here - Link to header.jpg in the images folder */
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 400px;                /* Parallax effect */
-
-  /*Your code here - cover the entire row*/
-  grid-column: 1/-1;
-  grid-row: 2/ 3;
-}
-
-header p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
-}
-
-.about-image{
-  /*Your code here */
-  grid-column: 1/-1;
-  grid-row: 3/4;
-  overflow: hidden;
-  max-height: 700px;
-}
-
-.about{
-  /*Your code here */
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-
-.method-image{
-  /*Your code here */
-  grid-column: 1/-1;
-  grid-row: 4/5;
-  overflow: hidden;
-  max-height: 700px;
-}
-
-.method{
-    /*Your code here - start in the 2nd column*/
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-
-.clients-image{
- /*Your code here */
-  grid-column: 1/-1;
-  grid-row: 5/6;
-  overflow: hidden;
-  max-height: 700px;
-}
-
-.clients{
- /*Your code here */
-  grid-column: 2/3;
-  grid-row: 5/6;
-}
-
-.contact-image{
-   /*Your code here */
-   grid-column: 1/-1;
-   grid-row: 6/7;
-   overflow: hidden;
-   max-height: 700px;
-}
-
-.contact{
-   /*Your code here */
-  grid-column: 2/3;
-  grid-row: 6/7;
-}
-
-.text-block{
-
-   /*Your code here */
-  align-self: center;
-  -webkit-align-self: center;
-  justify-self: center;
-  
-  background-color: rgba(255, 255, 255, .8);
-  border: 10px solid black;
-  padding: 30px;
-}
-
-
-
-@media /*Your code here - Add the first media query.*/
-        screen and (min-width: 800px)
-{
-
-  .container{
-    /*Your code here */
-    grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
-  }
-
-  .nav{
-    background-color: #ddd;
-
-     /*Your code here */
-     text-align: right;
-     padding: 35px;
-  }
-
-  .about-image{
-     /*Your code here */
-     grid-column: 2/4;
-  }
-
-  .about{
-    /*Your code here */
-    grid-column: 3/5;
-  }
-
-  .method-image{
-    /*Your code here */
-    grid-column: 3/5;
-  
-  }
-
-  .method{
-    /*Your code here */
-    grid-column: 2/4;
-  }
-
-  .clients-image{
-    /*Your code here */
-    grid-column: 2/4;
-  }
-
-  .clients{
-    /*Your code here */
-    grid-column: 3/5;
-  }
-
-  .contact-image{
-    /*Your code here */
-    grid-column: 3/5;
-  }
-
-  .contact{
-    /*Your code here */
-    grid-column: 2/4;
-   }
-
-}  /*End the media query*/
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: none; /* Removes scroll animation */
-  }
-
-  .skip a{
+/* animation customization */
+.skip a {
     background: white;
     left: 0;
     padding: 6px;
-    position: absolute;
-    top: -40px;
-    -webkit-transition: default;/* Your code here - set to default setting */
-    transition: default;/* Your code here - set to default setting */
+    position: absolute; /*Your code here - position relative to the parent */
+    top: -40px; /*Your code here - place 40px higher */
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
     z-index: 1;
-  }
+}
 
-  .skip a:focus{
-    top:0;
-    transition: none;
-  }
+.skip a:focus {
+    /*Add the selector and rule to move the skip link to the exact top.*/
+    top: 0;
+}
+
+:focus {
+    /*Add the selector and code to put a 2px black border around all elements in focus.*/
+    border: 2px solid #4f3e3a;
+}
+
+footer {
+    color: #000c1f;
+    padding-top: 0.3em;
+    padding-bottom: 0.1em;
+    text-align: center;
+}
+
+header {
+    color: #454d5c;
+}
+
+header p {
+    color: #454d5c;
+    font-size: 1.1em;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 2em;
+}
+
+.page-title {
+    font-size: 1.5em;
+    text-shadow: 1px 1px #f4f4fb;
+    line-height: 1.2;
+    text-align: left;
+    display: inline;
+    padding-left: 0.2em;
+}
+
+.portfolio-page-content {
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("../src/img/iceland_11.jpg"); /* Your code here - Link to header.jpg in the images folder */
+    background-position: center; /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover; /* Parallax effect */
+    color: #4f3e3a;
+    height: 800px; /* Parallax effect */
+}
+
+/* Gallery! */
+
+.gallery {
+    display: -webkit-box;
+    display: grid;
+    grid-auto-flow: row;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: left;
+    justify-content: left;
+    min-height: 400px;
+}
+
+.pics-link {
+    /* display: block; */
+    padding: 1em;
+    width: 10em;
+    max-width: 80%;
+}
+.pics {
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    box-shadow: #222 0.2em 0.2em 1em;
+    margin: 0;
+    padding: 0;
+
+    -webkit-filter: grayscale(80%) brightness(125%) contrast(80%);
+    filter: grayscale(100%) brightness(135%) contrast(120%);
+
+    transition: filter 0.3s, box-shadow 0.3s;
+    -webkit-transition: filter 0.3s, -webkit-filter 0.3s, box-shadow 0.3s;
+}
+.pics-link:hover .pics,
+.pics-link:focus .pics {
+    -webkit-filter: none;
+    filter: none;
+    box-shadow: #224 0.2em 0.2em 0.6em 0.1em;
+}
+
+/* Form! */
+form {
+    display: inline-block;
+    width: 400px;
+}
+label {
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+button {
+    /*Why couldn't I just use button?*/
+    display: block;
+    margin: 0 auto;
+    background-color: #000c1f;
+    color: #f4f4fb;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #f4f4fb;
+    color: #000c1f;
+}
+
+.form-container {
+    padding-top: 2em;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#my-photo {
+    max-height: 400px;
+    align-content: center;
+}
+
+@media /* Add the ipad media query.*/ screen and (min-width: 600px) {
+    .container {
+        /*Your code here */
+        display: grid;
+        grid-template-columns: 200px auto 500px auto;
+        grid-template-rows: 50px 30px 50px auto 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header h1 {
+        display: block;
+        padding: 1.5em 0 0.5em 0;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    header p {
+        display: block;
+        line-height: 1.2em;
+        padding-bottom: 1.2em;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    nav {
+        text-align: left;
+        padding: 35px;
+        display: block;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    footer {
+        display: block;
+        grid-column: 1/2;
+        grid-row: -2;
+    }
+    .portfolio-container,
+    .photography-container,
+    .contact-container,
+    .about-container,
+    .workshops-container {
+        display: block;
+        grid-column: 2 / span 3;
+        grid-row: 4/-1;
+        min-height: 600px;
+    }
+    .project-role {
+        padding-left: 1.5em;
+    }
+    #my-photo {
+        max-height: 400px;
+    }
+}
+
+@media /* Add the ipad media query.*/ screen and (min-width: 800px) {
+    .container {
+        /*Your code here */
+        display: grid;
+        grid-template-columns: 200px auto 500px auto;
+        grid-template-rows: 50px 30px 50px auto 30px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    nav {
+        text-align: center;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: none; /* Removes scroll animation */
+    }
+
+    .skip a {
+        background: white;
+        left: 0;
+        padding: 6px;
+        position: absolute;
+        top: -40px;
+        -webkit-transition: default; /* Your code here - set to default setting */
+        transition: default; /* Your code here - set to default setting */
+        z-index: 1;
+    }
+
+    .skip a:focus {
+        top: 0;
+        transition: none;
+    }
+
+    contact > span {
+        transition: none;
+    }
 }
